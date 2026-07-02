@@ -4,7 +4,6 @@ require_once "models/Usuario.php";
 
 class UsuarioController
 {
-
     private Usuario $usuario;
 
     public function __construct()
@@ -19,9 +18,17 @@ class UsuarioController
 
     public function autenticar()
     {
-        $this->usuario->login($_POST);
+        $usuario = $this->usuario->login($_POST);
 
-        header("Location: index.php");
+        if ($usuario) {
+
+            $_SESSION['usuario'] = $usuario;
+
+            header("Location: index.php");
+            exit;
+        }
+
+        header("Location: ?page=login");
     }
 
     public function cadastro()
@@ -34,14 +41,15 @@ class UsuarioController
         $this->usuario->cadastrar($_POST);
 
         header("Location: ?page=login");
+        exit;
     }
 
     public function logout()
     {
-        session_destroy();
+        unset($_SESSION['usuario']);
 
         header("Location: index.php");
+        exit;
     }
-
 }
 ?>

@@ -1,7 +1,9 @@
 <?php
-class Pedido{
 
-    public function listar(){}
+class Pedido
+{
+
+    public function listar($usuario){}
 
     public function buscar($id){}
 

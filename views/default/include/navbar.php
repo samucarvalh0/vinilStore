@@ -7,26 +7,16 @@
             Sinth-vinil
         </a>
 
-        <!-- Barra de pesquisa (Mobile) -->
         <form class="d-flex d-lg-none mx-auto w-50">
-            <input
-                class="form-control form-control-sm"
-                type="search"
-                placeholder="Pesquisar..."
-            >
+            <input class="form-control form-control-sm" type="search" placeholder="Pesquisar...">
         </form>
 
-        <!-- Botão hamburguer -->
-        <button class="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarPrincipal">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarPrincipal">
 
             <span class="navbar-toggler-icon"></span>
 
         </button>
 
-        <!-- Conteúdo recolhível -->
         <div class="collapse navbar-collapse" id="navbarPrincipal">
 
             <!-- Menu -->
@@ -52,22 +42,81 @@
 
             </ul>
 
-            <!-- Barra de pesquisa (Desktop) -->
             <form class="d-none d-lg-flex ms-lg-3">
 
-                <input
-                    class="form-control me-2"
-                    type="search"
-                    placeholder="Pesquisar...">
+                <input class="form-control me-2" type="search" placeholder="Pesquisar...">
 
                 <button class="btn btn-outline-light">
                     Buscar
                 </button>
 
             </form>
-            <a href="login.php" class="nav-icon text-white ms-3">
-                <i class="bi bi-person-circle"></i>
-            </a>
+            <div class="dropdown ms-3">
+
+                <a class="text-white h3 text-decoration-none" href="#" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+
+                    <i class="bi bi-person-circle"></i>
+
+                </a>
+
+                <ul class="dropdown-menu dropdown-menu-end">
+
+                    <?php if (empty($_SESSION['usuario'])): ?>
+
+                        <li>
+                            <a class="dropdown-item" href="?page=login">
+                                <i class="bi bi-box-arrow-in-right me-2"></i>
+                                Entrar
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item" href="?page=cadastro">
+                                <i class="bi bi-person-plus me-2"></i>
+                                Criar conta
+                            </a>
+                        </li>
+
+                    <?php else: ?>
+
+                        <li>
+                            <span class="dropdown-item-text">
+                                Olá,
+                                <strong><?= $_SESSION['usuario']['nome'] ?></strong>
+                            </span>
+                        </li>
+
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item" href="?page=perfil">
+                                <i class="bi bi-person me-2"></i>
+                                Meu Perfil
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item" href="?page=meus-pedidos">
+                                <i class="bi bi-bag me-2"></i>
+                                Meus Pedidos
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item text-danger" href="?page=logout">
+                                <i class="bi bi-box-arrow-right me-2"></i>
+                                Sair
+                            </a>
+                        </li>
+
+                    <?php endif; ?>
+
+                </ul>
+
+            </div>
 
         </div>
 

@@ -1,5 +1,7 @@
 <?php
-class Carrinho{
+
+class Carrinho
+{
 
     public function listar(){}
 

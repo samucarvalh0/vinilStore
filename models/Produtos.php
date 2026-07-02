@@ -1,6 +1,7 @@
 <?php
 
-class Produto{
+class Produto
+{
 
     public function listar(){}
 
@@ -13,5 +14,3 @@ class Produto{
     public function excluir($id){}
 
 }
-
-?>
