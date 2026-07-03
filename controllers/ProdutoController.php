@@ -61,7 +61,7 @@ class ProdutoController
     {
         $produtos = $this->produto->listar();
 
-        require "views/catalogo.php";
+        require "views/default/catalogo.php";
     }
 
     public function listarAdmin()
@@ -157,7 +157,7 @@ class ProdutoController
     {
         $produto = $this->produto->buscarPorId($id);
 
-        require "views/produto.php";
+        require "views/default/produto.php";
     }
 
     public function cadastrar()

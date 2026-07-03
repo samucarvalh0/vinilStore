@@ -4,7 +4,6 @@ require_once __DIR__ . "/../models/Carrinho.php";
 
 class CarrinhoController
 {
-
     private Carrinho $carrinho;
 
     public function __construct()
@@ -63,6 +62,5 @@ class CarrinhoController
         header("Location: ?page=catalogo");
         exit;
     }
-
 }
 ?>

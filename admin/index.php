@@ -93,5 +93,10 @@ switch ($page) {
         require "../controllers/AdminController.php";
         (new AdminController())->logout();
         break;
+
+    case 'detalhePed':
+    require "../controllers/PedidoController.php";
+    (new PedidoController())->detalhe($_GET['id'] ?? null);
+    break;
 }
 ?>

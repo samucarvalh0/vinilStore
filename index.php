@@ -29,9 +29,24 @@ switch ($page) {
         (new UsuarioController())->login();
         break;
 
+    case 'autenticar':
+        require_once "controllers/UsuarioController.php";
+        (new UsuarioController())->autenticar();
+        break;
+
     case 'cadastro':
         require_once "controllers/UsuarioController.php";
         (new UsuarioController())->cadastro();
+        break;
+
+    case 'salvarCadastro':
+        require_once "controllers/UsuarioController.php";
+        (new UsuarioController())->salvarCadastro();
+        break;
+
+    case 'logout':
+        require_once "controllers/UsuarioController.php";
+        (new UsuarioController())->logout();
         break;
 
     case 'carrinho':
@@ -39,14 +54,44 @@ switch ($page) {
         (new CarrinhoController())->listar();
         break;
 
+    case 'adicionar-carrinho':
+        require_once "controllers/CarrinhoController.php";
+        (new CarrinhoController())->adicionar();
+        break;
+
+    case 'remover-carrinho':
+        require_once "controllers/CarrinhoController.php";
+        (new CarrinhoController())->remover($_GET['id'] ?? null);
+        break;
+
+    case 'atualizar-carrinho':
+        require_once "controllers/CarrinhoController.php";
+        (new CarrinhoController())->atualizar();
+        break;
+
+    case 'limpar-carrinho':
+        require_once "controllers/CarrinhoController.php";
+        (new CarrinhoController())->limpar();
+        break;
+
     case 'checkout':
         require_once "controllers/PedidoController.php";
         (new PedidoController())->checkout();
         break;
 
+    case 'finalizar-pedido':
+        require_once "controllers/PedidoController.php";
+        (new PedidoController())->finalizar();
+        break;
+
     case 'meus-pedidos':
         require_once "controllers/PedidoController.php";
         (new PedidoController())->listar();
+        break;
+
+    case 'detalhe-pedido':
+        require_once "controllers/PedidoController.php";
+        (new PedidoController())->detalhe($_GET['id'] ?? null);
         break;
 
     case 'sobre':
@@ -57,6 +102,11 @@ switch ($page) {
     case 'contato':
         require_once "controllers/HomeController.php";
         (new HomeController())->contato();
+        break;
+
+    case 'enviar-contato':
+        require_once "controllers/HomeController.php";
+        (new HomeController())->enviarContato();
         break;
 
     default:

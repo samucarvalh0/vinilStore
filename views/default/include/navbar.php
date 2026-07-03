@@ -92,13 +92,6 @@
                         </li>
 
                         <li>
-                            <a class="dropdown-item" href="?page=perfil">
-                                <i class="bi bi-person me-2"></i>
-                                Meu Perfil
-                            </a>
-                        </li>
-
-                        <li>
                             <a class="dropdown-item" href="?page=meus-pedidos">
                                 <i class="bi bi-bag me-2"></i>
                                 Meus Pedidos

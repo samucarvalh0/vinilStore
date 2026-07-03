@@ -29,9 +29,19 @@
                                     <tr>
                                         <td><strong>#<?= $pedido['id'] ?></strong></td>
                                         <td><?= $pedido['cliente'] ?? 'N/A' ?></td>
-                                        <td><?= date('d/m/Y', strtotime($pedido['data'] ?? now())) ?></td>
+                                        <td><?= date('d/m/Y H:i', strtotime($pedido['data_pedido'] ?? date('Y-m-d H:i:s'))) ?></td>
                                         <td>
-                                            <span class="badge bg-warning"><?= $pedido['status'] ?? 'Pendente' ?></span>
+                                            <?php
+                                                $statusColor = match($pedido['status']) {
+                                                    'pendente' => 'warning',
+                                                    'confirmado' => 'info',
+                                                    'enviado' => 'primary',
+                                                    'entregue' => 'success',
+                                                    'cancelado' => 'danger',
+                                                    default => 'secondary'
+                                                };
+                                            ?>
+                                            <span class="badge bg-<?= $statusColor ?>"><?= ucfirst($pedido['status']) ?></span>
                                         </td>
                                         <td><strong>R$ <?= number_format($pedido['total'] ?? 0, 2, ',', '.') ?></strong></td>
                                         <td>

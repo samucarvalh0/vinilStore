@@ -71,7 +71,7 @@
                                         <tr>
                                             <td><?= htmlspecialchars($pedido['id']) ?></td>
                                             <td><?= htmlspecialchars($pedido['cliente'] ?? 'Sem cliente') ?></td>
-                                            <td><?= date('d/m/Y H:i', strtotime($pedido['data_pedido'])) ?></td>
+                                            <td><?= date('d/m/Y H:i', strtotime($pedido['data'])) ?></td>
                                             <td>
                                                 <?php
                                                     $statusColor = match($pedido['status']) {

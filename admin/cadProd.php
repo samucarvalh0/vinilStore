@@ -18,11 +18,13 @@
                             <div class="mb-3">
                                 <div class="d-flex justify-content-between align-items-center mb-2">
                                     <label class="form-label mb-0">Categoria</label>
-                                    <button type="button" class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modalNovaCategoria">
+                                    <button type="button" class="btn btn-sm btn-outline-primary" data-bs-toggle="modal"
+                                        data-bs-target="#modalNovaCategoria">
                                         <i class="bi bi-plus-circle me-1"></i>Criar Categoria
                                     </button>
                                 </div>
-                                <input type="text" name="categoria_nome" list="categorias-list" class="form-control" required placeholder="Digite ou selecione uma categoria">
+                                <input type="text" name="categoria_nome" list="categorias-list" class="form-control"
+                                    required placeholder="Digite ou selecione uma categoria">
                                 <datalist id="categorias-list">
                                     <?php if (!empty($categorias)): ?>
                                         <?php foreach ($categorias as $cat): ?>
@@ -42,7 +44,8 @@
                                 <div class="col-md-6">
                                     <div class="mb-3">
                                         <label class="form-label">Ano</label>
-                                        <input type="number" name="ano" class="form-control" min="1900" max="2100" value="<?= date('Y') ?>">
+                                        <input type="number" name="ano" class="form-control" min="1900" max="2100"
+                                            value="<?= date('Y') ?>">
                                     </div>
                                 </div>
                             </div>
@@ -120,37 +123,37 @@
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 <script>
-document.getElementById('btnSalvarCategoria').addEventListener('click', function() {
-    const nome = document.querySelector('#formNovaCategoria input[name="nome"]').value;
-    const descricao = document.querySelector('#formNovaCategoria textarea[name="descricao"]').value;
+    document.getElementById('btnSalvarCategoria').addEventListener('click', function () {
+        const nome = document.querySelector('#formNovaCategoria input[name="nome"]').value;
+        const descricao = document.querySelector('#formNovaCategoria textarea[name="descricao"]').value;
 
-    if (!nome.trim()) {
-        alert('Digite o nome da categoria');
-        return;
-    }
-
-    // Enviar dados via AJAX com header X-Requested-With
-    fetch('?page=salvarCat', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/x-www-form-urlencoded',
-            'X-Requested-With': 'XMLHttpRequest'
-        },
-        body: 'nome=' + encodeURIComponent(nome) + '&descricao=' + encodeURIComponent(descricao)
-    })
-    .then(response => response.json())
-    .then(data => {
-        if (data.success) {
-            alert('Categoria criada com sucesso!');
-            // Recarregar a página para listar a nova categoria
-            location.reload();
-        } else {
-            alert('Erro ao salvar categoria');
+        if (!nome.trim()) {
+            alert('Digite o nome da categoria');
+            return;
         }
-    })
-    .catch(error => {
-        console.error('Erro:', error);
-        alert('Erro ao salvar categoria');
+
+        // Enviar dados via AJAX com header X-Requested-With
+        fetch('?page=salvarCat', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+                'X-Requested-With': 'XMLHttpRequest'
+            },
+            body: 'nome=' + encodeURIComponent(nome) + '&descricao=' + encodeURIComponent(descricao)
+        })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    alert('Categoria criada com sucesso!');
+                    // Recarregar a página para listar a nova categoria
+                    location.reload();
+                } else {
+                    alert('Erro ao salvar categoria');
+                }
+            })
+            .catch(error => {
+                console.error('Erro:', error);
+                alert('Erro ao salvar categoria');
+            });
     });
-});
 </script>
