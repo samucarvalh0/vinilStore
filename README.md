@@ -23,7 +23,7 @@ Um e-commerce completo desenvolvido em <strong>PHP</strong>, focado em proporcio
 
 A **Sith-vinil** é uma plataforma de e-commerce desenvolvida para a comercialização de discos de vinil, oferecendo uma experiência intuitiva tanto para clientes quanto para administradores.
 
-O projeto foi idealizado desde a prototipação da interface até a implementação completa do sistema, utilizando **PHP**, **MySQL**, **HTML**, **CSS** e **JavaScript**, seguindo boas práticas de desenvolvimento web.
+O projeto foi idealizado desde a prototipação da interface até a implementação completa do sistema, utilizando **PHP**, **MySQL**, **HTML**, **CSS** e **JavaScript**.
 
 Além da loja virtual, o sistema conta com um painel administrativo para gerenciamento completo dos produtos e pedidos.
 
@@ -35,7 +35,6 @@ Além da loja virtual, o sistema conta com um painel administrativo para gerenci
 
 - 🏠 Página Inicial
 - 🎵 Catálogo de Produtos
-- 🔍 Pesquisa de Discos
 - 📀 Página de Detalhes
 - 🛒 Carrinho de Compras
 - 💳 Checkout
@@ -69,7 +68,6 @@ O sistema possui um banco de dados relacional responsável pelo gerenciamento de
 - Categorias
 - Pedidos
 - Itens dos Pedidos
-- Formas de Pagamento
 - Controle de Estoque
 
 ---
