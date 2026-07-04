@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🎵 VinilStore
+# 🎵 Sith-vinil
 
 ### *Sua loja online especializada em discos de vinil.*
 
@@ -21,7 +21,7 @@ Um e-commerce completo desenvolvido em <strong>PHP</strong>, focado em proporcio
 
 # 📖 Sobre
 
-A **VinilStore** é uma plataforma de e-commerce desenvolvida para a comercialização de discos de vinil, oferecendo uma experiência intuitiva tanto para clientes quanto para administradores.
+A **Sith-vinil** é uma plataforma de e-commerce desenvolvida para a comercialização de discos de vinil, oferecendo uma experiência intuitiva tanto para clientes quanto para administradores.
 
 O projeto foi idealizado desde a prototipação da interface até a implementação completa do sistema, utilizando **PHP**, **MySQL**, **HTML**, **CSS** e **JavaScript**, seguindo boas práticas de desenvolvimento web.
 
