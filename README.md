@@ -8,7 +8,7 @@
 Um e-commerce completo desenvolvido em <strong>PHP</strong>, focado em proporcionar uma experiência moderna para amantes da música e colecionadores de vinis.
 </p>
 
-![Status](https://img.shields.io/badge/Status-Em%20Desenvolvimento-orange?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-Finalizado-green?style=for-the-badge)
 ![PHP](https://img.shields.io/badge/PHP-8+-777BB4?style=for-the-badge&logo=php&logoColor=white)
 ![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
