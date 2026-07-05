@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🎵 Sith-vinil
+# 🎵 Sinth-vinil
 
 ### *Sua loja online especializada em discos de vinil.*
 
